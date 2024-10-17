@@ -5,29 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>
-        Flower Garden | Home
-    </title>
-
+    <title>Flower Garden | Home</title>
 </head>
 
-<body>
+<body class="bg-gray-100">
 
-    <header class="bg-blue-500 text-white p-4">
-        <h1 class="text-2xl">Student Test</h1>
+    <header class="bg-blue-500 text-white p-4 flex justify-between items-center">
+        <h1 class="text-2xl">Flower Garden</h1>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="hover:underline">Home</a></li>
+                <li><a href="#" class="hover:underline">About</a></li>
+                <li><a href="#" class="hover:underline">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main class="p-4">
         <form class="space-y-4">
-            <div>
-                <label for="studentName" class="block text-sm font-medium text-gray-700">Student Name</label>
-                <input type="text" id="studentName" name="studentName"
-                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
-            </div>
-            <div>
-                <label for="studentEmail" class="block text-sm font-medium text-gray-700">Student Email</label>
-                <input type="email" id="studentEmail" name="studentEmail"
-                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="studentName" class="block text-sm font-medium text-gray-700">Student Name</label>
+                    <input type="text" id="studentName" name="studentName"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="studentEmail" class="block text-sm font-medium text-gray-700">Student Email</label>
+                    <input type="email" id="studentEmail" name="studentEmail"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="studentAge" class="block text-sm font-medium text-gray-700">Student Age</label>
+                    <input type="number" id="studentAge" name="studentAge"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="studentGrade" class="block text-sm font-medium text-gray-700">Student Grade</label>
+                    <select id="studentGrade" name="studentGrade"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="F">F</option>
+                    </select>
+                </div>
             </div>
             <div>
                 <label for="testQuestion1" class="block text-sm font-medium text-gray-700">Question 1: What is the
@@ -47,7 +69,9 @@
                 <input type="text" id="testQuestion3" name="testQuestion3"
                     class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
             </div>
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Submit</button>
+            <div class="flex justify-end">
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Submit</button>
+            </div>
         </form>
     </main>
 
